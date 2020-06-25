@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Truth & Condition</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+        <link href="fonts/Roboto/Roboto-Light.ttf" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/uif2qam.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="wrapP">
+            <header class="headerSecondary">
+                <a href="index.html"><img src="images/home.png" alt="home button" id="home"></a>
+                <div class="bigTitle">
+                    <img src="images/process.png" alt="Truth and condition" id="imgProcess">
+                </div>
+                <nav class="secondNav">
+                    <ul>
+                        <li><a href="truth.html">TRUTH</a></li>
+                        <li><a href="condition.html">CONDITION</a></li>
+                        <li><a href="process.html">PROCESS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="steps" class="containerContent">
+                <div class="step stepMargin" id="modeling" onclick="displayText('modeling')">
+                    <h2>Modeling</h2>
+                    <div class="stepText">
+                        3D modeling was done in Blender, consisting mainly of primitive shapes that were shaded and textured then brought into Unity. The 3D head was hand-rigged so that we had control over the movements of specific areas of the face. This armature would be joined with the head object and then animated and exported into Unity, where we built an animation system that would loop the Blender animations.
+                    </div>
+                </div>
+                <div class="step" id="texturing" onclick="displayText('texturing')">
+                    <h2>Texturing</h2>
+                    <div class="stepText">
+                        For the printed poster designs, 3D models were textured in Blender using the Cycles renderer. Due to the limitation of AR, textures and lighting were kept simple and minimal, primarily utilizing the principled shader. Typographic textures were completed in Illustrator and applied to the models in Blender.<br/><br/>
+We used the Universal Render Pipeline, a prebuilt scriptable render pipeline made by Unity, to facilitate texturing in Unity and to improve performance on mobile devices.
+
+                    </div>
+                </div>
+                <div class="step stepMargin" id="animation" onclick="displayText('animation')">
+                    <h2>Animation</h2>
+                    <div class="stepText">
+                        A script, “Levitate” (figure 3), was adapted to create the hovering effect on all of the suspended objects in our first poster.
+                    </div>
+                </div>
+                <div class="step" id="user" onclick="displayText('user')">
+                    <h2>User Interaction</h2>
+                    <div class="stepText">
+                        User movement is entirely physical, as the application relies on data from the user’s phone camera to then communicate with ARCore’s image tracking system. As such the only interaction the user can have is to refresh the image tracking data, which we implemented in the form of a UI button to ensure that if any issues were encountered users could easily reset the application and try again. 
+                    </div>
+                </div>
+                <div class="step stepMargin" id="data" onclick="displayText('data')">
+                    <h2>Data Manipulation & Algorithms</h2>
+                    <div class="stepText">
+                        We do not manipulate any data outside of ARCore’s image tracking capabilities; there are some scripts that determine movement algorithms (such as the levitating objects in Print 1), wherein depending on user-defined rates of speed objects will lerp between positions and rotations, giving the impression of levitation movement.
+                    </div>
+                </div>
+                <div class="step" id="devices" onclick="displayText('devices')">
+                    <h2>External Devices</h2>
+                    <div class="stepText">
+                        Participants must use their phone to interact with the experience. In the original proposal we would have published the application on the Google Play Store and Apple Store, however due to time constraints users must plug their phones in via USB and download the Unity build to their phone. They may also receive the Android .APK file from any networked source if their phone is able to install unverified applications.
+                    </div>
+                </div>
+                <div class="step stepMargin" id="system" onclick="displayText('system')">
+                    <h2>System / Software</h2>
+                    <div class="stepText">
+                        The application was built entirely in Unity (version 2019.3.1f1), and runs mainly in one scene (ImageTracking). An additional non-AR test scene was created to test things such as shaders, animations and prefabricated objects before porting them to AR, or in case there was an issue with certain AR features.<br/><br/>
+                        The project runs on Unity’s ARFoundation package, which is now built-in to Unity as of version 2019.2. This package contains Google ARCore and Google ARKit, two AR frameworks destined for Android and iOS devices respectively. 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

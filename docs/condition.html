@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Truth & Condition</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+        <link href="fonts/Roboto/Roboto-Light.ttf" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/uif2qam.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="wrapC">
+            <header class="headerSecondary">
+                <a href="index.html"><img src="images/home.png" alt="home button" id="home"></a>
+                <div class="bigTitle">
+                    <img src="images/condition.png" alt="Truth and condition" id="imgCondition">
+                </div>
+                <nav class="secondNav">
+                    <ul>
+                        <li><a href="truth.html">TRUTH</a></li>
+                        <li><a href="condition.html">CONDITION</a></li>
+                        <li><a href="process.html">PROCESS</a></li>
+                    </ul>
+                </nav>
+            
+            </header>
+            <div class="containerContent">
+                <img src="images/poster2.png" alt="head" class="posters" onclick="showZoom('condition')">
+                <p class="posterDesc">A head floating in space, animating between different facial expressions ranging from happiness to fear. Within the head, a combination of both conditioned and truthful statements can be found.<br/><br/> This represents the consolidation of both truth and conditioning: instead of conditioning hiding the truth, the two work in unison and are part of the same whole. As the head animates, users can get in close and see inside the head to read the text.</p>
+            </div>
+            <div id="conditionZoom">
+                <img src="images/poster2.png" alt="zoom poster2">
+                <img src="images/close.png" class="close" alt="close" onclick="closeZoom('condition')">
+            </div>
+        </div>
+
+    </body>
+
+</html>

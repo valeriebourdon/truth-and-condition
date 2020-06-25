@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Truth & Condition</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+        <link href="fonts/Roboto/Roboto-Light.ttf" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/uif2qam.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="wrapT">
+            <header class="headerSecondary">
+                <a href="index.html"><img src="images/home.png" alt="home button" id="home"></a>
+                <div class="bigTitle">
+                    <img src="images/truth.png" alt="Truth and condition" id="imgTruth">
+                </div>
+                <nav class="secondNav">
+                    <ul>
+                        <li><a href="truth.html">TRUTH</a></li>
+                        <li><a href="condition.html">CONDITION</a></li>
+                        <li><a href="process.html">PROCESS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="containerContent">
+                <img src="images/poster1.png" alt="truth" class="posters" onclick="showZoom('truth')">
+                <p class="posterDesc">A series of primitive objects floating in space, with words of affirmation plastered all over them (representing the truth; positive statements unmodified by life events). These primitive objects would be encased in a tower of hollowed-out rectangles, which would have more negative, self-conscious statements on them (representing conditioning; what the truth gets filtered through).<br/><br/> Users could get in close within the structure, surpassing the conditioning to read the truthful statements found inside. In the sense of the narrative and concept, this would reveal that fear and conditioning has gained control over truth and confidence.
+                </p>
+            </div>
+            <div id="truthZoom">
+                <img src="images/poster1.png" alt="zoom poster1">
+                <img src="images/close.png" class="close" alt="close" onclick="closeZoom('truth')">
+            </div>
+        </div>
+    </body>
+
+</html>
